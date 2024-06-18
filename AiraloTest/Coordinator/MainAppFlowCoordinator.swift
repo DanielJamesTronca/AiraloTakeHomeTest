@@ -22,8 +22,18 @@ final class MainAppFlowCoordinator: Coordinator {
     }
     
     func start() {
-        let actions: LocalEsimActions = LocalEsimActions()
+        let actions: LocalEsimActions = LocalEsimActions(
+            didTapCountry: { [weak self] localEsim in
+                self?.showCountryPackages(with: localEsim)
+            }
+        )
         let viewController = dependencyContainer.makeEsimViewController(actions: actions)
         navigationController.viewControllers = [viewController]
+    }
+    
+    private func showCountryPackages(with localEsim: LocalEsimElement) {
+        let viewController = dependencyContainer.makeCountryPackagesViewController(localEsim: localEsim)
+        viewController.title = localEsim.title
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

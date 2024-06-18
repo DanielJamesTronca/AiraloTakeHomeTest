@@ -11,11 +11,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     internal var window: UIWindow?
     
-    private let dependencyInjectionContainer: DependencyInjectionContainer = DependencyInjectionContainer()
+    private let mainAppFlowCoordinator: MainAppFlowCoordinator = MainAppFlowCoordinator(dependencyContainer: DependencyInjectionContainer())
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let mainAppFlowCoordinator: MainAppFlowCoordinator = MainAppFlowCoordinator(dependencyContainer: dependencyInjectionContainer)
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = mainAppFlowCoordinator.navigationController
         window?.makeKeyAndVisible()
