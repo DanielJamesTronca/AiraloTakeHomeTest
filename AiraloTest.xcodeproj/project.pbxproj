@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		B9D7AD162C215ACB0074EAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */; };
 		B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD172C215ACB0074EAA6 /* SceneDelegate.swift */; };
-		B9D7AD1A2C215ACB0074EAA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD192C215ACB0074EAA6 /* ViewController.swift */; };
-		B9D7AD1D2C215ACB0074EAA6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B9D7AD1C2C215ACB0074EAA6 /* Base */; };
 		B9D7AD1F2C215ACD0074EAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D7AD1E2C215ACD0074EAA6 /* Assets.xcassets */; };
 		B9D7AD222C215ACD0074EAA6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B9D7AD212C215ACD0074EAA6 /* Base */; };
 		B9D7AD2D2C215AD00074EAA6 /* AiraloTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD2C2C215AD00074EAA6 /* AiraloTestTests.swift */; };
@@ -27,6 +25,13 @@
 		B9D7AD602C215D560074EAA6 /* CountryPackagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD5F2C215D560074EAA6 /* CountryPackagesService.swift */; };
 		B9D7AD632C215EFD0074EAA6 /* LocalEsim.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD622C215EFD0074EAA6 /* LocalEsim.swift */; };
 		B9D7AD652C215FAA0074EAA6 /* CountryPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */; };
+		B9D7AD682C2162230074EAA6 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD672C2162230074EAA6 /* DependencyInjectionContainer.swift */; };
+		B9D7AD6B2C21626A0074EAA6 /* MainAppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD6A2C21626A0074EAA6 /* MainAppFlowCoordinator.swift */; };
+		B9D7AD6E2C21627C0074EAA6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD6D2C21627C0074EAA6 /* Coordinator.swift */; };
+		B9D7AD712C2163660074EAA6 /* LocalEsimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD702C2163660074EAA6 /* LocalEsimViewController.swift */; };
+		B9D7AD732C21636D0074EAA6 /* LocalEsimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */; };
+		B9D7AD762C2164150074EAA6 /* CountryPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD752C2164150074EAA6 /* CountryPackagesViewModel.swift */; };
+		B9D7AD782C21641B0074EAA6 /* CountryPackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +55,6 @@
 		B9D7AD122C215ACB0074EAA6 /* AiraloTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D7AD172C215ACB0074EAA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9D7AD192C215ACB0074EAA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B9D7AD1C2C215ACB0074EAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9D7AD1E2C215ACD0074EAA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9D7AD212C215ACD0074EAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9D7AD232C215ACD0074EAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +74,13 @@
 		B9D7AD5F2C215D560074EAA6 /* CountryPackagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesService.swift; sourceTree = "<group>"; };
 		B9D7AD622C215EFD0074EAA6 /* LocalEsim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsim.swift; sourceTree = "<group>"; };
 		B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackages.swift; sourceTree = "<group>"; };
+		B9D7AD672C2162230074EAA6 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
+		B9D7AD6A2C21626A0074EAA6 /* MainAppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppFlowCoordinator.swift; sourceTree = "<group>"; };
+		B9D7AD6D2C21627C0074EAA6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B9D7AD702C2163660074EAA6 /* LocalEsimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsimViewController.swift; sourceTree = "<group>"; };
+		B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsimViewModel.swift; sourceTree = "<group>"; };
+		B9D7AD752C2164150074EAA6 /* CountryPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesViewModel.swift; sourceTree = "<group>"; };
+		B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +131,11 @@
 		B9D7AD142C215ACB0074EAA6 /* AiraloTest */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD692C21625A0074EAA6 /* Coordinator */,
 				B9D7AD482C215B740074EAA6 /* Data */,
 				B9D7AD472C215B6C0074EAA6 /* Features */,
 				B9D7AD462C215B550074EAA6 /* Assets */,
 				B9D7AD452C215B3E0074EAA6 /* Application */,
-				B9D7AD192C215ACB0074EAA6 /* ViewController.swift */,
 				B9D7AD232C215ACD0074EAA6 /* Info.plist */,
 			);
 			path = AiraloTest;
@@ -151,7 +161,7 @@
 		B9D7AD452C215B3E0074EAA6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B9D7AD1B2C215ACB0074EAA6 /* Main.storyboard */,
+				B9D7AD662C2162110074EAA6 /* DependencyInjectionContainer */,
 				B9D7AD202C215ACD0074EAA6 /* LaunchScreen.storyboard */,
 				B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */,
 				B9D7AD172C215ACB0074EAA6 /* SceneDelegate.swift */,
@@ -170,6 +180,8 @@
 		B9D7AD472C215B6C0074EAA6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD742C21640C0074EAA6 /* CountryPackages */,
+				B9D7AD6F2C21635D0074EAA6 /* LocalEsim */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -246,6 +258,49 @@
 				B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B9D7AD662C2162110074EAA6 /* DependencyInjectionContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD672C2162230074EAA6 /* DependencyInjectionContainer.swift */,
+			);
+			path = DependencyInjectionContainer;
+			sourceTree = "<group>";
+		};
+		B9D7AD692C21625A0074EAA6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD6C2C2162750074EAA6 /* Protocols */,
+				B9D7AD6A2C21626A0074EAA6 /* MainAppFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B9D7AD6C2C2162750074EAA6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD6D2C21627C0074EAA6 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B9D7AD6F2C21635D0074EAA6 /* LocalEsim */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD702C2163660074EAA6 /* LocalEsimViewController.swift */,
+				B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */,
+			);
+			path = LocalEsim;
+			sourceTree = "<group>";
+		};
+		B9D7AD742C21640C0074EAA6 /* CountryPackages */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD752C2164150074EAA6 /* CountryPackagesViewModel.swift */,
+				B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */,
+			);
+			path = CountryPackages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +409,6 @@
 			files = (
 				B9D7AD1F2C215ACD0074EAA6 /* Assets.xcassets in Resources */,
 				B9D7AD222C215ACD0074EAA6 /* Base in Resources */,
-				B9D7AD1D2C215ACB0074EAA6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,19 +433,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D7AD682C2162230074EAA6 /* DependencyInjectionContainer.swift in Sources */,
 				B9D7AD522C215C410074EAA6 /* HeadersType.swift in Sources */,
 				B9D7AD4B2C215BD90074EAA6 /* NetworkManager.swift in Sources */,
-				B9D7AD1A2C215ACB0074EAA6 /* ViewController.swift in Sources */,
+				B9D7AD732C21636D0074EAA6 /* LocalEsimViewModel.swift in Sources */,
 				B9D7AD552C215C550074EAA6 /* ServiceProtocol.swift in Sources */,
 				B9D7AD162C215ACB0074EAA6 /* AppDelegate.swift in Sources */,
 				B9D7AD652C215FAA0074EAA6 /* CountryPackages.swift in Sources */,
 				B9D7AD632C215EFD0074EAA6 /* LocalEsim.swift in Sources */,
 				B9D7AD502C215C340074EAA6 /* NetworkError.swift in Sources */,
+				B9D7AD6B2C21626A0074EAA6 /* MainAppFlowCoordinator.swift in Sources */,
+				B9D7AD6E2C21627C0074EAA6 /* Coordinator.swift in Sources */,
 				B9D7AD4E2C215C2A0074EAA6 /* HTTPMethod.swift in Sources */,
 				B9D7AD602C215D560074EAA6 /* CountryPackagesService.swift in Sources */,
 				B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */,
+				B9D7AD762C2164150074EAA6 /* CountryPackagesViewModel.swift in Sources */,
 				B9D7AD5E2C215D480074EAA6 /* LocalEsimService.swift in Sources */,
+				B9D7AD782C21641B0074EAA6 /* CountryPackagesViewController.swift in Sources */,
 				B9D7AD582C215CCC0074EAA6 /* EsimRepository.swift in Sources */,
+				B9D7AD712C2163660074EAA6 /* LocalEsimViewController.swift in Sources */,
 				B9D7AD5A2C215CD90074EAA6 /* EsimRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B9D7AD1B2C215ACB0074EAA6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9D7AD1C2C215ACB0074EAA6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B9D7AD202C215ACD0074EAA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -578,7 +630,7 @@
 				INFOPLIST_FILE = AiraloTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +657,7 @@
 				INFOPLIST_FILE = AiraloTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
