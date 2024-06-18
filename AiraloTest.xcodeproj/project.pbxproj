@@ -16,6 +16,17 @@
 		B9D7AD2D2C215AD00074EAA6 /* AiraloTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD2C2C215AD00074EAA6 /* AiraloTestTests.swift */; };
 		B9D7AD372C215AD00074EAA6 /* AiraloTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD362C215AD00074EAA6 /* AiraloTestUITests.swift */; };
 		B9D7AD392C215AD00074EAA6 /* AiraloTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD382C215AD00074EAA6 /* AiraloTestUITestsLaunchTests.swift */; };
+		B9D7AD4B2C215BD90074EAA6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD4A2C215BD90074EAA6 /* NetworkManager.swift */; };
+		B9D7AD4E2C215C2A0074EAA6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD4D2C215C2A0074EAA6 /* HTTPMethod.swift */; };
+		B9D7AD502C215C340074EAA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD4F2C215C340074EAA6 /* NetworkError.swift */; };
+		B9D7AD522C215C410074EAA6 /* HeadersType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD512C215C410074EAA6 /* HeadersType.swift */; };
+		B9D7AD552C215C550074EAA6 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD542C215C550074EAA6 /* ServiceProtocol.swift */; };
+		B9D7AD582C215CCC0074EAA6 /* EsimRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD572C215CCC0074EAA6 /* EsimRepository.swift */; };
+		B9D7AD5A2C215CD90074EAA6 /* EsimRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD592C215CD90074EAA6 /* EsimRepositoryImplementation.swift */; };
+		B9D7AD5E2C215D480074EAA6 /* LocalEsimService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD5D2C215D480074EAA6 /* LocalEsimService.swift */; };
+		B9D7AD602C215D560074EAA6 /* CountryPackagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD5F2C215D560074EAA6 /* CountryPackagesService.swift */; };
+		B9D7AD632C215EFD0074EAA6 /* LocalEsim.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD622C215EFD0074EAA6 /* LocalEsim.swift */; };
+		B9D7AD652C215FAA0074EAA6 /* CountryPackages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		B9D7AD322C215AD00074EAA6 /* AiraloTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D7AD362C215AD00074EAA6 /* AiraloTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloTestUITests.swift; sourceTree = "<group>"; };
 		B9D7AD382C215AD00074EAA6 /* AiraloTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9D7AD4A2C215BD90074EAA6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		B9D7AD4D2C215C2A0074EAA6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B9D7AD4F2C215C340074EAA6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B9D7AD512C215C410074EAA6 /* HeadersType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersType.swift; sourceTree = "<group>"; };
+		B9D7AD542C215C550074EAA6 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		B9D7AD572C215CCC0074EAA6 /* EsimRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsimRepository.swift; sourceTree = "<group>"; };
+		B9D7AD592C215CD90074EAA6 /* EsimRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsimRepositoryImplementation.swift; sourceTree = "<group>"; };
+		B9D7AD5D2C215D480074EAA6 /* LocalEsimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsimService.swift; sourceTree = "<group>"; };
+		B9D7AD5F2C215D560074EAA6 /* CountryPackagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesService.swift; sourceTree = "<group>"; };
+		B9D7AD622C215EFD0074EAA6 /* LocalEsim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsim.swift; sourceTree = "<group>"; };
+		B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +177,75 @@
 		B9D7AD482C215B740074EAA6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD612C215EF60074EAA6 /* Models */,
+				B9D7AD562C215C6F0074EAA6 /* Repositories */,
+				B9D7AD492C215BCB0074EAA6 /* Network */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B9D7AD492C215BCB0074EAA6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD532C215C4E0074EAA6 /* Protocols */,
+				B9D7AD4C2C215C230074EAA6 /* Data */,
+				B9D7AD4A2C215BD90074EAA6 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B9D7AD4C2C215C230074EAA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD4D2C215C2A0074EAA6 /* HTTPMethod.swift */,
+				B9D7AD4F2C215C340074EAA6 /* NetworkError.swift */,
+				B9D7AD512C215C410074EAA6 /* HeadersType.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B9D7AD532C215C4E0074EAA6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD542C215C550074EAA6 /* ServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B9D7AD562C215C6F0074EAA6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD5B2C215D330074EAA6 /* EsimRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B9D7AD5B2C215D330074EAA6 /* EsimRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD5C2C215D3D0074EAA6 /* Service */,
+				B9D7AD572C215CCC0074EAA6 /* EsimRepository.swift */,
+				B9D7AD592C215CD90074EAA6 /* EsimRepositoryImplementation.swift */,
+			);
+			path = EsimRepository;
+			sourceTree = "<group>";
+		};
+		B9D7AD5C2C215D3D0074EAA6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD5D2C215D480074EAA6 /* LocalEsimService.swift */,
+				B9D7AD5F2C215D560074EAA6 /* CountryPackagesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B9D7AD612C215EF60074EAA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD622C215EFD0074EAA6 /* LocalEsim.swift */,
+				B9D7AD642C215FAA0074EAA6 /* CountryPackages.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D7AD522C215C410074EAA6 /* HeadersType.swift in Sources */,
+				B9D7AD4B2C215BD90074EAA6 /* NetworkManager.swift in Sources */,
 				B9D7AD1A2C215ACB0074EAA6 /* ViewController.swift in Sources */,
+				B9D7AD552C215C550074EAA6 /* ServiceProtocol.swift in Sources */,
 				B9D7AD162C215ACB0074EAA6 /* AppDelegate.swift in Sources */,
+				B9D7AD652C215FAA0074EAA6 /* CountryPackages.swift in Sources */,
+				B9D7AD632C215EFD0074EAA6 /* LocalEsim.swift in Sources */,
+				B9D7AD502C215C340074EAA6 /* NetworkError.swift in Sources */,
+				B9D7AD4E2C215C2A0074EAA6 /* HTTPMethod.swift in Sources */,
+				B9D7AD602C215D560074EAA6 /* CountryPackagesService.swift in Sources */,
 				B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */,
+				B9D7AD5E2C215D480074EAA6 /* LocalEsimService.swift in Sources */,
+				B9D7AD582C215CCC0074EAA6 /* EsimRepository.swift in Sources */,
+				B9D7AD5A2C215CD90074EAA6 /* EsimRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
