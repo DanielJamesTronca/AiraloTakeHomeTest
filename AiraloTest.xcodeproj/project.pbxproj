@@ -32,6 +32,14 @@
 		B9D7AD732C21636D0074EAA6 /* LocalEsimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */; };
 		B9D7AD762C2164150074EAA6 /* CountryPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD752C2164150074EAA6 /* CountryPackagesViewModel.swift */; };
 		B9D7AD782C21641B0074EAA6 /* CountryPackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */; };
+		B9D7AD7B2C2164D00074EAA6 /* FetchLocalEsimUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD7A2C2164D00074EAA6 /* FetchLocalEsimUseCase.swift */; };
+		B9D7AD7D2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD7C2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift */; };
+		B9D7AD802C2166510074EAA6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD7F2C2166510074EAA6 /* State.swift */; };
+		B9D7AD832C2167360074EAA6 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD822C2167360074EAA6 /* Alertable.swift */; };
+		B9D7AD862C2167750074EAA6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD852C2167750074EAA6 /* UIView+Extension.swift */; };
+		B9D7AD882C21679B0074EAA6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD872C21679B0074EAA6 /* LoadingView.swift */; };
+		B9D7AD8B2C2167C80074EAA6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD8A2C2167C80074EAA6 /* App.swift */; };
+		B9D7AD8D2C2167D30074EAA6 /* App+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD8C2C2167D30074EAA6 /* App+Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +89,14 @@
 		B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsimViewModel.swift; sourceTree = "<group>"; };
 		B9D7AD752C2164150074EAA6 /* CountryPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesViewModel.swift; sourceTree = "<group>"; };
 		B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPackagesViewController.swift; sourceTree = "<group>"; };
+		B9D7AD7A2C2164D00074EAA6 /* FetchLocalEsimUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocalEsimUseCase.swift; sourceTree = "<group>"; };
+		B9D7AD7C2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCountryPackagesUseCase.swift; sourceTree = "<group>"; };
+		B9D7AD7F2C2166510074EAA6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		B9D7AD822C2167360074EAA6 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		B9D7AD852C2167750074EAA6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B9D7AD872C21679B0074EAA6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B9D7AD8A2C2167C80074EAA6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B9D7AD8C2C2167D30074EAA6 /* App+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +147,8 @@
 		B9D7AD142C215ACB0074EAA6 /* AiraloTest */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD812C21671C0074EAA6 /* Utils */,
+				B9D7AD792C2164C40074EAA6 /* Domain */,
 				B9D7AD692C21625A0074EAA6 /* Coordinator */,
 				B9D7AD482C215B740074EAA6 /* Data */,
 				B9D7AD472C215B6C0074EAA6 /* Features */,
@@ -161,6 +179,7 @@
 		B9D7AD452C215B3E0074EAA6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD892C2167C10074EAA6 /* App */,
 				B9D7AD662C2162110074EAA6 /* DependencyInjectionContainer */,
 				B9D7AD202C215ACD0074EAA6 /* LaunchScreen.storyboard */,
 				B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */,
@@ -288,6 +307,7 @@
 		B9D7AD6F2C21635D0074EAA6 /* LocalEsim */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD7E2C21664B0074EAA6 /* Data */,
 				B9D7AD702C2163660074EAA6 /* LocalEsimViewController.swift */,
 				B9D7AD722C21636D0074EAA6 /* LocalEsimViewModel.swift */,
 			);
@@ -301,6 +321,50 @@
 				B9D7AD772C21641B0074EAA6 /* CountryPackagesViewController.swift */,
 			);
 			path = CountryPackages;
+			sourceTree = "<group>";
+		};
+		B9D7AD792C2164C40074EAA6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD7A2C2164D00074EAA6 /* FetchLocalEsimUseCase.swift */,
+				B9D7AD7C2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B9D7AD7E2C21664B0074EAA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD7F2C2166510074EAA6 /* State.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B9D7AD812C21671C0074EAA6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD842C21676A0074EAA6 /* Extensions */,
+				B9D7AD822C2167360074EAA6 /* Alertable.swift */,
+				B9D7AD872C21679B0074EAA6 /* LoadingView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B9D7AD842C21676A0074EAA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD852C2167750074EAA6 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9D7AD892C2167C10074EAA6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B9D7AD8A2C2167C80074EAA6 /* App.swift */,
+				B9D7AD8C2C2167D30074EAA6 /* App+Localization.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,9 +503,13 @@
 				B9D7AD732C21636D0074EAA6 /* LocalEsimViewModel.swift in Sources */,
 				B9D7AD552C215C550074EAA6 /* ServiceProtocol.swift in Sources */,
 				B9D7AD162C215ACB0074EAA6 /* AppDelegate.swift in Sources */,
+				B9D7AD832C2167360074EAA6 /* Alertable.swift in Sources */,
 				B9D7AD652C215FAA0074EAA6 /* CountryPackages.swift in Sources */,
 				B9D7AD632C215EFD0074EAA6 /* LocalEsim.swift in Sources */,
+				B9D7AD8B2C2167C80074EAA6 /* App.swift in Sources */,
 				B9D7AD502C215C340074EAA6 /* NetworkError.swift in Sources */,
+				B9D7AD802C2166510074EAA6 /* State.swift in Sources */,
+				B9D7AD882C21679B0074EAA6 /* LoadingView.swift in Sources */,
 				B9D7AD6B2C21626A0074EAA6 /* MainAppFlowCoordinator.swift in Sources */,
 				B9D7AD6E2C21627C0074EAA6 /* Coordinator.swift in Sources */,
 				B9D7AD4E2C215C2A0074EAA6 /* HTTPMethod.swift in Sources */,
@@ -449,9 +517,13 @@
 				B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */,
 				B9D7AD762C2164150074EAA6 /* CountryPackagesViewModel.swift in Sources */,
 				B9D7AD5E2C215D480074EAA6 /* LocalEsimService.swift in Sources */,
+				B9D7AD7D2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift in Sources */,
 				B9D7AD782C21641B0074EAA6 /* CountryPackagesViewController.swift in Sources */,
 				B9D7AD582C215CCC0074EAA6 /* EsimRepository.swift in Sources */,
 				B9D7AD712C2163660074EAA6 /* LocalEsimViewController.swift in Sources */,
+				B9D7AD7B2C2164D00074EAA6 /* FetchLocalEsimUseCase.swift in Sources */,
+				B9D7AD862C2167750074EAA6 /* UIView+Extension.swift in Sources */,
+				B9D7AD8D2C2167D30074EAA6 /* App+Localization.swift in Sources */,
 				B9D7AD5A2C215CD90074EAA6 /* EsimRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
