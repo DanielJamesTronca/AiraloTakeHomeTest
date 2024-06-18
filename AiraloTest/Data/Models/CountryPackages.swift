@@ -14,7 +14,7 @@ struct CountryPackages: Codable {
     let packages: [Package]
 }
 
-struct Package: Codable {
+struct Package: Codable, Hashable {
     let id: Int
     let slug, type: String
     let price: Double
@@ -24,7 +24,7 @@ struct Package: Codable {
     let shortInfo: String?
     let isStock: Bool
     let packageOperator: Operator
-
+    
     enum CodingKeys: String, CodingKey {
         case id, slug, type, price, title, data, validity, day, amount
         case isUnlimited = "is_unlimited"
@@ -34,7 +34,14 @@ struct Package: Codable {
     }
 }
 
-struct Operator: Codable {
+extension Package {
+    var imageUrl: URL? {
+        guard let url = URL(string: packageOperator.image.url) else { return nil }
+        return url
+    }
+}
+
+struct Operator: Codable, Hashable {
     let id: Int
     let title, style, gradientStart, gradientEnd: String
     let isKycVerify: Int
@@ -44,11 +51,11 @@ struct Operator: Codable {
     let rechargeability: Bool
     let apnType, apnTypeIos, apnTypeAndroid, apnSingle: String
     let dataRoaming: Bool
-    let networks: [Network]
+    //    let networks: [Network]
     let info: [String]
     let image: ImageRepresentation
     let countries: [Country]
-
+    
     enum CodingKeys: String, CodingKey {
         case id, title, style
         case gradientStart = "gradient_start"
@@ -65,23 +72,24 @@ struct Operator: Codable {
         case apnTypeAndroid = "apn_type_android"
         case apnSingle = "apn_single"
         case dataRoaming = "data_roaming"
-        case networks, info, image, countries
+//        case networks
+        case info, image, countries
     }
 }
 
-struct Country: Codable {
+struct Country: Codable, Hashable {
     let id: Int
     let slug, title: String
     let image: ImageRepresentation
 }
 
-struct Network: Codable {
-    let network, serviceType: String
-    let status: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case network
-        case serviceType = "service_type"
-        case status
-    }
-}
+//struct Network: Codable {
+//    let network, serviceType: String
+//    let status: Bool
+//
+//    enum CodingKeys: String, CodingKey {
+//        case network
+//        case serviceType = "service_type"
+//        case status
+//    }
+//}

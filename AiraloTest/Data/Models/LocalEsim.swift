@@ -21,7 +21,14 @@ struct LocalEsimElement: Codable {
     }
 }
 
-struct ImageRepresentation: Codable {
+extension LocalEsimElement {
+    var imageUrl: URL? {
+        guard let url = URL(string: image.url) else { return nil }
+        return url
+    }
+}
+
+struct ImageRepresentation: Codable, Hashable {
     let width, height: Int
     let url: String
 }

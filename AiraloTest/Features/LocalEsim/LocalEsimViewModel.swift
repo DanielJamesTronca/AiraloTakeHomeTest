@@ -9,32 +9,29 @@ import Foundation
 import Combine
 
 struct LocalEsimActions {
-    let didTapCountry: ((_ packages: CountryPackages)->Void)
+    let didTapCountry: ((_ localEsim: LocalEsimElement)->Void)
 }
 
 final class LocalEsimViewModel {
     
     deinit { print("\(type(of: self)) is being deallocated") }
 
-    private let localEsimActions: LocalEsimActions
+    private let actions: LocalEsimActions
     private let fetchLocalEsimUseCase: any FetchLocalEsimUseCase
-    private let fetchCountryPacakgesUseCase: any FetchCountryPackagesUseCase
     
     /// Set to store Combine cancellables.
     internal var cancellables = Set<AnyCancellable>()
     /// Published property to track the current state of articles loading.
     @Published private(set) var state: State = State.idle
     /// Data source for articles to be displayed.
-    private(set) var dataSource: LocalEsim = []
+    private(set) var dataSource: [EsimDataSource] = []
     
     init(
-        localEsimActions: LocalEsimActions,
-        fetchLocalEsimUseCase: any FetchLocalEsimUseCase,
-        fetchCountryPacakgesUseCase: any FetchCountryPackagesUseCase
+        actions: LocalEsimActions,
+        fetchLocalEsimUseCase: any FetchLocalEsimUseCase
     ) {
-        self.localEsimActions = localEsimActions
+        self.actions = actions
         self.fetchLocalEsimUseCase = fetchLocalEsimUseCase
-        self.fetchCountryPacakgesUseCase = fetchCountryPacakgesUseCase
         initData()
     }
     
@@ -43,11 +40,18 @@ final class LocalEsimViewModel {
             guard let self else { return }
             state = .loading
             do {
-                dataSource = try await fetchLocalEsimUseCase.execute()
+                let localEsim: LocalEsim = try await fetchLocalEsimUseCase.execute()
+                dataSource = [
+                    EsimDataSource(header: App.Localization.popularCountries, esim: localEsim)
+                ]
                 state = .loaded
             } catch {
                 state = .failed(error)
             }
         }
+    }
+    
+    internal func didTapLocalEsim(esim: LocalEsimElement) {
+        actions.didTapCountry(esim)
     }
 }

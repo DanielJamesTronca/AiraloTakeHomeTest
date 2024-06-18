@@ -6,15 +6,38 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct CountryPackagesActions {
+final class CountryPackagesViewModel: ObservableObject {
     
-}
+    private let localEsim: LocalEsimElement
+    private let fetchCountryPacakgesUseCase: any FetchCountryPackagesUseCase
 
-final class CountryPackagesViewModel {
-    private let localEsimActions: CountryPackagesActions
+    /// Published property to track the current state of articles loading.
+    @Published private(set) var state: State = State.idle
     
-    init(localEsimActions: CountryPackagesActions) {
-        self.localEsimActions = localEsimActions
+    @Published private(set) var countryPackages: CountryPackages?
+
+    init(
+        localEsim: LocalEsimElement,
+        fetchCountryPacakgesUseCase: any FetchCountryPackagesUseCase
+    ) {
+        self.localEsim = localEsim
+        self.fetchCountryPacakgesUseCase = fetchCountryPacakgesUseCase
+        initData()
+    }
+    
+    private func initData() {
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            state = .loading
+            do {
+                countryPackages = try await fetchCountryPacakgesUseCase.execute(esimId: "\(localEsim.id)")
+                print(countryPackages)
+                state = .loaded
+            } catch {
+                state = .failed(error)
+            }
+        }
     }
 }

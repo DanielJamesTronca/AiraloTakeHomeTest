@@ -22,9 +22,10 @@ final class LocalEsimViewController: UIViewController, Alertable {
     
     private lazy var tableView: UITableView = {
         let tableView: UITableView = UITableView()
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(cell: EsimTableViewCell.self)
         return tableView
     }()
 
@@ -55,12 +56,7 @@ final class LocalEsimViewController: UIViewController, Alertable {
         case .loaded:
             LoadingView.hide()
             tableView.reloadData()
-            if viewModel.dataSource.isEmpty {
-                handleEmptyState()
-            } else {
-                contentUnavailableConfiguration = nil
-                setNeedsUpdateContentUnavailableConfiguration()
-            }
+            handleEmptyState()
         case .failed(let error):
             LoadingView.hide()
             showAlert(message: error.localizedDescription)
@@ -70,34 +66,58 @@ final class LocalEsimViewController: UIViewController, Alertable {
     }
     
     private func handleEmptyState() {
-        var config = UIContentUnavailableConfiguration.empty()
-        config.image = UIImage(systemName: "binoculars")
-        config.text = "Empty title"
-        config.secondaryText = "Empty description"
-        contentUnavailableConfiguration = config
+        if viewModel.dataSource.isEmpty {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = UIImage(systemName: "binoculars")
+            config.text = "Empty title"
+            config.secondaryText = "Empty description"
+            contentUnavailableConfiguration = config
+        } else {
+            contentUnavailableConfiguration = nil
+            setNeedsUpdateContentUnavailableConfiguration()
+        }
     }
     
     private func layout() {
+        title = App.Localization.genericHello
         view.addContentView(tableView)
     }
 }
 
 extension LocalEsimViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        defer { tableView.deselectRow(at: indexPath, animated: true) }
+        let esim = viewModel.dataSource[indexPath.section].esim[indexPath.row]
+        viewModel.didTapLocalEsim(esim: esim)
     }
 }
 
 extension LocalEsimViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.dataSource.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.dataSource[section].esim.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let esim = viewModel.dataSource[indexPath.section].esim[indexPath.row]
+        let cell: EsimTableViewCell = tableView.dequeue(indexPath: indexPath, type: EsimTableViewCell.self)
+        cell.selectionStyle = .none
+        cell.configure(with: esim)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.dataSource[section].header
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }
