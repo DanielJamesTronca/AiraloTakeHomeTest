@@ -20,7 +20,7 @@ This project is built using a clean MVVM architecture, incorporating use cases a
 ## Screenshots
 Include some screenshots of your app here to showcase the pixel-perfect design and RTL support.
 
-![Screenshot 1](Simulator Screenshot - iPhone 15 - 2024-06-19 at 14.53.57.png)
-![Screenshot 2](Simulator Screenshot - iPhone 15 - 2024-06-19 at 14.53.41.png)
-![Screenshot 1](Simulator Screenshot - iPhone 15 - 2024-06-19 at 14.53.59.png)
-![Screenshot 2](Simulator Screenshot - iPhone 15 - 2024-06-19 at 14.53.38.png)
+![Screenshot 1](default_esim_desig.pngn)
+![Screenshot 2](default_esim_design.png)
+![Screenshot 1](arabic_esim_design.png)
+![Screenshot 2](arabic_packages_design.png)
