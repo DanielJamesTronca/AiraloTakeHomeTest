@@ -16,3 +16,6 @@
 "BUY_NOW_BUTTON" = "اشتر الآن";
 "DATA_INFORMATIVE" = "بيانات";
 "VALIDITY_INFORMATIVE" = "الصلاحية";
+"EMPTY_ESIM_TITLE" = "لا توجد eSIMs متاحة";
+"EMPTY_ESIM_DESCRIPTION" = "لم نتمكن من العثور على أي eSIM في الوقت الحالي. يرجى التحقق مرة أخرى لاحقًا.";
+"LOADING_PACKAGES_TITLE" = "جاري تحميل الحزم...";

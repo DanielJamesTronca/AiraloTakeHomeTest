@@ -20,13 +20,17 @@ struct PackageCardView: View {
                 Divider()
                 
                 makeInformationalRow(
-                    title: App.Localization.dataInformative, image: "arrow.up", value: package.data
+                    title: App.Localization.dataInformative,
+                    image: "arrow.up",
+                    value: package.data
                 )
                 
                 Divider()
                 
                 makeInformationalRow(
-                    title: App.Localization.validityInformative, image: "calendar", value: package.validity
+                    title: App.Localization.validityInformative,
+                    image: "calendar",
+                    value: package.validity
                 )
                 
                 Divider()
