@@ -1,4 +1,4 @@
-# Project Name
+# Airalo Take Home Test
 
 ## Overview
 This project is built using a clean MVVM architecture, incorporating use cases and flow coordinators to ensure a scalable and maintainable codebase. 
