@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B91000B52C22ECB800D274A3 /* EsimHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000B42C22ECB800D274A3 /* EsimHeaderView.swift */; };
 		B91000B72C22FEFC00D274A3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000B62C22FEFC00D274A3 /* Color+Extension.swift */; };
+		B91000BD2C23060600D274A3 /* LocalEsimViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000BC2C23060600D274A3 /* LocalEsimViewModelTests.swift */; };
+		B91000BF2C2307BD00D274A3 /* FetchLocalEsimUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000BE2C2307BD00D274A3 /* FetchLocalEsimUseCaseTests.swift */; };
+		B91000C32C2307FB00D274A3 /* LocalEsim.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000C22C2307FB00D274A3 /* LocalEsim.swift */; };
 		B949B8862C21F440003F4F3C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8852C21F440003F4F3C /* ImageLoader.swift */; };
 		B949B8882C21F447003F4F3C /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8872C21F447003F4F3C /* UIImageLoader.swift */; };
 		B949B88A2C21F45C003F4F3C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8892C21F45C003F4F3C /* UIImageView+Extension.swift */; };
@@ -76,6 +79,9 @@
 /* Begin PBXFileReference section */
 		B91000B42C22ECB800D274A3 /* EsimHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsimHeaderView.swift; sourceTree = "<group>"; };
 		B91000B62C22FEFC00D274A3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B91000BC2C23060600D274A3 /* LocalEsimViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsimViewModelTests.swift; sourceTree = "<group>"; };
+		B91000BE2C2307BD00D274A3 /* FetchLocalEsimUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocalEsimUseCaseTests.swift; sourceTree = "<group>"; };
+		B91000C22C2307FB00D274A3 /* LocalEsim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEsim.swift; sourceTree = "<group>"; };
 		B949B8852C21F440003F4F3C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B949B8872C21F447003F4F3C /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 		B949B8892C21F45C003F4F3C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -154,6 +160,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91000B92C2305E900D274A3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B91000C02C2307EB00D274A3 /* Data */,
+				B91000BB2C2305FC00D274A3 /* Domain */,
+				B91000BA2C2305F000D274A3 /* LocalESim */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B91000BA2C2305F000D274A3 /* LocalESim */ = {
+			isa = PBXGroup;
+			children = (
+				B91000BC2C23060600D274A3 /* LocalEsimViewModelTests.swift */,
+			);
+			path = LocalESim;
+			sourceTree = "<group>";
+		};
+		B91000BB2C2305FC00D274A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B91000BE2C2307BD00D274A3 /* FetchLocalEsimUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B91000C02C2307EB00D274A3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B91000C12C2307F100D274A3 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B91000C12C2307F100D274A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B91000C22C2307FB00D274A3 /* LocalEsim.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B949B8832C21F429003F4F3C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +267,7 @@
 		B9D7AD2B2C215AD00074EAA6 /* AiraloTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				B91000B92C2305E900D274A3 /* Features */,
 				B9D7AD2C2C215AD00074EAA6 /* AiraloTestTests.swift */,
 			);
 			path = AiraloTestTests;
@@ -623,7 +672,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91000BF2C2307BD00D274A3 /* FetchLocalEsimUseCaseTests.swift in Sources */,
+				B91000BD2C23060600D274A3 /* LocalEsimViewModelTests.swift in Sources */,
 				B9D7AD2D2C215AD00074EAA6 /* AiraloTestTests.swift in Sources */,
+				B91000C32C2307FB00D274A3 /* LocalEsim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

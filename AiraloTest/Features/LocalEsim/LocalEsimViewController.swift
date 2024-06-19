@@ -25,6 +25,7 @@ final class LocalEsimViewController: UIViewController, Alertable {
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .systemBackground
         tableView.register(cell: EsimTableViewCell.self)
         tableView.registerForHeaderFooterView(cell: EsimHeaderView.self)
         return tableView
@@ -70,8 +71,8 @@ final class LocalEsimViewController: UIViewController, Alertable {
         if viewModel.dataSource.isEmpty {
             var config = UIContentUnavailableConfiguration.empty()
             config.image = UIImage(systemName: "binoculars")
-            config.text = "Empty title"
-            config.secondaryText = "Empty description"
+            config.text = App.Localization.emptyEsimTitle
+            config.secondaryText = App.Localization.emptyEsimDescription
             contentUnavailableConfiguration = config
         } else {
             contentUnavailableConfiguration = nil

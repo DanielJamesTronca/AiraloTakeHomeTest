@@ -48,7 +48,7 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
     private lazy var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.15
         view.layer.shadowOffset = CGSize(width: 0, height: 10)
@@ -87,7 +87,7 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: App.Margin.large),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -App.Margin.large),
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: App.Margin.large),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -App.Margin.large),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -App.Margin.medium),
             
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: App.Margin.extraLarge),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -App.Margin.extraLarge),

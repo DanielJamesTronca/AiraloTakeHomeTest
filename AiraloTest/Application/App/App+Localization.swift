@@ -18,6 +18,9 @@ extension App {
         static let buyNowButton: String = "BUY_NOW_BUTTON".localized
         static let dataInformative: String = "DATA_INFORMATIVE".localized
         static let validityInformative: String = "VALIDITY_INFORMATIVE".localized
+        static let emptyEsimTitle: String = "EMPTY_ESIM_TITLE".localized
+        static let emptyEsimDescription: String = "EMPTY_ESIM_DESCRIPTION".localized
+        static let loadingPackagesTitle: String = "LOADING_PACKAGES_TITLE".localized
         
         static func somethingWentWrongDescription(args: String) -> String {
             "SOMETHING_WENT_WRONG_DESCRIPTION".localized(with: args)

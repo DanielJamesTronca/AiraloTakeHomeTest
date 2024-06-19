@@ -16,3 +16,6 @@
 "BUY_NOW_BUTTON" = "Buy now";
 "DATA_INFORMATIVE" = "Data";
 "VALIDITY_INFORMATIVE" = "Validity";
+"EMPTY_ESIM_TITLE" = "No eSIMs Available";
+"EMPTY_ESIM_DESCRIPTION" = "We couldn't find any eSIMs at the moment. Please check back later.";
+"LOADING_PACKAGES_TITLE" = "Loading packages...";

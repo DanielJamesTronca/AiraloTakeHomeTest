@@ -24,7 +24,7 @@ struct CountryPackagesView: View {
                 description: Text(App.Localization.noPackagesAvailableDescription)
             )
         case .loading:
-            ProgressView("Loading packages...")
+            ProgressView(App.Localization.loadingPackagesTitle)
                 .frame(maxHeight: .infinity, alignment: .center)
         case .failed(let error):
             ContentUnavailableView(
