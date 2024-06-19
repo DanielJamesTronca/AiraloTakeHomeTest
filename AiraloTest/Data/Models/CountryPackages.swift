@@ -51,7 +51,6 @@ struct Operator: Codable, Hashable {
     let rechargeability: Bool
     let apnType, apnTypeIos, apnTypeAndroid, apnSingle: String
     let dataRoaming: Bool
-    //    let networks: [Network]
     let info: [String]
     let image: ImageRepresentation
     let countries: [Country]
@@ -72,7 +71,6 @@ struct Operator: Codable, Hashable {
         case apnTypeAndroid = "apn_type_android"
         case apnSingle = "apn_single"
         case dataRoaming = "data_roaming"
-//        case networks
         case info, image, countries
     }
 }
@@ -82,14 +80,3 @@ struct Country: Codable, Hashable {
     let slug, title: String
     let image: ImageRepresentation
 }
-
-//struct Network: Codable {
-//    let network, serviceType: String
-//    let status: Bool
-//
-//    enum CodingKeys: String, CodingKey {
-//        case network
-//        case serviceType = "service_type"
-//        case status
-//    }
-//}

@@ -25,6 +25,12 @@ extension UITableView {
         self.register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
     }
     
+    /// This method register a Reusable HeaderFooterView
+    /// - Parameter cell: Cell Type used to retrieve the reuseIdentifier
+    func registerForHeaderFooterView<T: UITableViewHeaderFooterView>(cell: T.Type) where T: Reusable {
+        self.register(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
+    }
+    
     /// This method dequeue a Reusable cell based on the Type given in input
     /// - Parameters:
     ///   - indexPath: The index path that specifies the location of the new supplementary view.
@@ -35,5 +41,16 @@ extension UITableView {
             preconditionFailure("Cannot dequeue, check if this cell has been registered")
         }
         return cell
+    }
+    
+    /// This method dequeue a Reusable HeaderFooterView based on the Type given in input
+    /// - Parameters:
+    ///   - type: Type of the given cell
+    /// - Returns: The view dequeued from the tableView
+    func dequeueHeaderFooterView<T: UITableViewHeaderFooterView>(type: T.Type = T.self) -> T where T: Reusable {
+        guard let view = self.dequeueReusableHeaderFooterView(withIdentifier: T.reuseIdentifier) as? T else {
+            preconditionFailure("Cannot dequeue, check if this cell has been registered")
+        }
+        return view
     }
 }
