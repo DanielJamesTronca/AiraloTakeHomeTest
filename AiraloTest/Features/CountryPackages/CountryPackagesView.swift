@@ -18,12 +18,20 @@ struct CountryPackagesView: View {
     var body: some View {
         switch viewModel.state {
         case .idle:
-            ContentUnavailableView("No Packages Available", systemImage: "binoculars", description: Text("Please check back later for available packages."))
+            ContentUnavailableView(
+                App.Localization.noPackagesAvailableTitle,
+                systemImage: "binoculars",
+                description: Text(App.Localization.noPackagesAvailableDescription)
+            )
         case .loading:
             ProgressView("Loading packages...")
                 .frame(maxHeight: .infinity, alignment: .center)
         case .failed(let error):
-            ContentUnavailableView("Something went wrong", systemImage: "exclamationmark.triangle", description: Text("We encountered an error: \(error.localizedDescription)"))
+            ContentUnavailableView(
+                App.Localization.somethingWentWrongTitle,
+                systemImage: "exclamationmark.triangle",
+                description: Text(App.Localization.somethingWentWrongDescription(args: error.localizedDescription))
+            )
         case .loaded:
             PackagesView(viewModel: viewModel)
         }

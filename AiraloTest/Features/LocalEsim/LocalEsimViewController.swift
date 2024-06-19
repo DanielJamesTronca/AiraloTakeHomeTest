@@ -26,6 +26,7 @@ final class LocalEsimViewController: UIViewController, Alertable {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cell: EsimTableViewCell.self)
+        tableView.registerForHeaderFooterView(cell: EsimHeaderView.self)
         return tableView
     }()
 
@@ -109,8 +110,11 @@ extension LocalEsimViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel.dataSource[section].header
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: EsimHeaderView = tableView.dequeueHeaderFooterView(type: EsimHeaderView.self)
+        let header: String = viewModel.dataSource[section].header
+        headerView.configure(with: header)
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

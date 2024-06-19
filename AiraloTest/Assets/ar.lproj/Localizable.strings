@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  AiraloTest
+
+  Created by TRONCA DANIEL JAMES on 19/06/24.
+  
+*/
+
+"GENERIC_GOT_IT" = "تم";
+"GENERIC_HELLO" = "مرحبا";
+"POPULAR_COUNTRIES" = "البلدان الشعبية";
+"NO_PACKAGES_AVAILABLE_TITLE" = "لا توجد حزم متاحة";
+"NO_PACKAGES_AVAILABLE_DESCRIPTION" = "يرجى التحقق لاحقًا للحصول على الحزم المتاحة.";
+"SOMETHING_WENT_WRONG_TITLE" = "حدث خطأ ما";
+"SOMETHING_WENT_WRONG_DESCRIPTION" = "واجهنا خطأ: %@";
+"BUY_NOW_BUTTON" = "اشتر الآن";
+"DATA_INFORMATIVE" = "بيانات";
+"VALIDITY_INFORMATIVE" = "الصلاحية";

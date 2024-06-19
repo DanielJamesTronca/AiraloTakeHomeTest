@@ -8,24 +8,30 @@
 import UIKit
 
 final class EsimTableViewCell: UITableViewCell, Reusable {
+    
     private lazy var cellImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "your_image_name")
         return imageView
     }()
     
     private lazy var cellLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.numberOfLines = .zero
+        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        label.lineBreakMode = .byTruncatingTail
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
     
     private lazy var arrowImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: "chevron.right")
         imageView.tintColor = .secondaryLabel
+        imageView.setContentHuggingPriority(.required, for: .horizontal)
+        imageView.setContentCompressionResistancePriority(.required, for: .horizontal)
         return imageView
     }()
     
@@ -33,6 +39,7 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
         let stackView = UIStackView(arrangedSubviews: [cellImageView, cellLabel, arrowImageView])
         stackView.axis = .horizontal
         stackView.alignment = .center
+        stackView.distribution = .fill
         stackView.spacing = App.Margin.medium
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -64,6 +71,12 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
         if let url = esim.imageUrl {
             cellImageView.loadImage(at: url)
         }
+        // Adjust arrow direction for RTL languages
+        if UIView.userInterfaceLayoutDirection(for: arrowImageView.semanticContentAttribute) == .rightToLeft {
+            arrowImageView.image = UIImage(systemName: "chevron.left")
+        } else {
+            arrowImageView.image = UIImage(systemName: "chevron.right")
+        }
     }
     
     private func layout() {
@@ -73,8 +86,8 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
         NSLayoutConstraint.activate([
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: App.Margin.large),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -App.Margin.large),
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: App.Margin.medium),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -App.Margin.medium),
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: App.Margin.large),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -App.Margin.large),
             
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: App.Margin.extraLarge),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -App.Margin.extraLarge),
@@ -84,12 +97,27 @@ final class EsimTableViewCell: UITableViewCell, Reusable {
             cellImageView.widthAnchor.constraint(equalToConstant: 37),
             cellImageView.heightAnchor.constraint(equalToConstant: 28)
         ])
+        handleRtlLayout()
+    }
+    
+    private func handleRtlLayout() {
+        // Handle RTL layout by adjusting the alignment
+        if UIView.userInterfaceLayoutDirection(for: containerView.semanticContentAttribute) == .rightToLeft {
+            cellLabel.textAlignment = .right
+            cellImageView.semanticContentAttribute = .forceRightToLeft
+            arrowImageView.semanticContentAttribute = .forceRightToLeft
+        } else {
+            cellLabel.textAlignment = .left
+            cellImageView.semanticContentAttribute = .forceLeftToRight
+            arrowImageView.semanticContentAttribute = .forceLeftToRight
+        }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         cellLabel.text = nil
         cellImageView.image = nil
+        arrowImageView.image = nil
         cellImageView.cancelImageLoad()
     }
 }

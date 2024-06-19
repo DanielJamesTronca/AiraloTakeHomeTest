@@ -19,5 +19,7 @@ extension App {
         static let extraLarge: CGFloat = 20
         /// 25 margin
         static let ultra: CGFloat = 25
+        /// 50 margin
+        static let extraUltra: CGFloat = 50
     }
 }

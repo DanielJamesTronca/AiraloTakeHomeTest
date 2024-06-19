@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91000B52C22ECB800D274A3 /* EsimHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000B42C22ECB800D274A3 /* EsimHeaderView.swift */; };
+		B91000B72C22FEFC00D274A3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91000B62C22FEFC00D274A3 /* Color+Extension.swift */; };
 		B949B8862C21F440003F4F3C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8852C21F440003F4F3C /* ImageLoader.swift */; };
 		B949B8882C21F447003F4F3C /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8872C21F447003F4F3C /* UIImageLoader.swift */; };
 		B949B88A2C21F45C003F4F3C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8892C21F45C003F4F3C /* UIImageView+Extension.swift */; };
@@ -14,6 +16,8 @@
 		B949B88F2C220089003F4F3C /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B88E2C220089003F4F3C /* PackagesView.swift */; };
 		B949B8912C220404003F4F3C /* PackageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8902C220404003F4F3C /* PackageCardView.swift */; };
 		B949B8932C220430003F4F3C /* GhostButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B8922C220430003F4F3C /* GhostButtonStyle.swift */; };
+		B949B8982C22E7D1003F4F3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B949B8962C22E7D1003F4F3C /* Localizable.strings */; };
+		B949B89C2C22E837003F4F3C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949B89B2C22E837003F4F3C /* String+Extension.swift */; };
 		B9D7AD162C215ACB0074EAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */; };
 		B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7AD172C215ACB0074EAA6 /* SceneDelegate.swift */; };
 		B9D7AD1F2C215ACD0074EAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D7AD1E2C215ACD0074EAA6 /* Assets.xcassets */; };
@@ -70,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B91000B42C22ECB800D274A3 /* EsimHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsimHeaderView.swift; sourceTree = "<group>"; };
+		B91000B62C22FEFC00D274A3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		B949B8852C21F440003F4F3C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B949B8872C21F447003F4F3C /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 		B949B8892C21F45C003F4F3C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -77,6 +83,10 @@
 		B949B88E2C220089003F4F3C /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
 		B949B8902C220404003F4F3C /* PackageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCardView.swift; sourceTree = "<group>"; };
 		B949B8922C220430003F4F3C /* GhostButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostButtonStyle.swift; sourceTree = "<group>"; };
+		B949B8972C22E7D1003F4F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B949B8992C22E7EC003F4F3C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B949B89A2C22E7EC003F4F3C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B949B89B2C22E837003F4F3C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B9D7AD122C215ACB0074EAA6 /* AiraloTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D7AD152C215ACB0074EAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D7AD172C215ACB0074EAA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 		B949B8832C21F429003F4F3C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B9D7AD822C2167360074EAA6 /* Alertable.swift */,
 				B949B8842C21F434003F4F3C /* ImageLoader */,
 			);
 			path = Manager;
@@ -238,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B9D7AD1E2C215ACD0074EAA6 /* Assets.xcassets */,
+				B949B8962C22E7D1003F4F3C /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -394,7 +406,6 @@
 			children = (
 				B949B8832C21F429003F4F3C /* Manager */,
 				B9D7AD842C21676A0074EAA6 /* Extensions */,
-				B9D7AD822C2167360074EAA6 /* Alertable.swift */,
 				B9D7AD872C21679B0074EAA6 /* LoadingView.swift */,
 				B949B8922C220430003F4F3C /* GhostButtonStyle.swift */,
 			);
@@ -407,6 +418,8 @@
 				B9D7AD852C2167750074EAA6 /* UIView+Extension.swift */,
 				B9D7AD952C21F2300074EAA6 /* UITableView+Extension.swift */,
 				B949B8892C21F45C003F4F3C /* UIImageView+Extension.swift */,
+				B949B89B2C22E837003F4F3C /* String+Extension.swift */,
+				B91000B62C22FEFC00D274A3 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				B9D7AD932C21F2140074EAA6 /* EsimTableViewCell.swift */,
+				B91000B42C22ECB800D274A3 /* EsimHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -515,6 +529,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = B9D7AD092C215ACB0074EAA6;
 			productRefGroup = B9D7AD132C215ACB0074EAA6 /* Products */;
@@ -534,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D7AD1F2C215ACD0074EAA6 /* Assets.xcassets in Resources */,
+				B949B8982C22E7D1003F4F3C /* Localizable.strings in Resources */,
 				B9D7AD222C215ACD0074EAA6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,11 +594,14 @@
 				B949B8912C220404003F4F3C /* PackageCardView.swift in Sources */,
 				B9D7AD6B2C21626A0074EAA6 /* MainAppFlowCoordinator.swift in Sources */,
 				B9D7AD6E2C21627C0074EAA6 /* Coordinator.swift in Sources */,
+				B949B89C2C22E837003F4F3C /* String+Extension.swift in Sources */,
+				B91000B72C22FEFC00D274A3 /* Color+Extension.swift in Sources */,
 				B9D7AD4E2C215C2A0074EAA6 /* HTTPMethod.swift in Sources */,
 				B9D7AD602C215D560074EAA6 /* CountryPackagesService.swift in Sources */,
 				B949B8932C220430003F4F3C /* GhostButtonStyle.swift in Sources */,
 				B9D7AD182C215ACB0074EAA6 /* SceneDelegate.swift in Sources */,
 				B9D7AD762C2164150074EAA6 /* CountryPackagesViewModel.swift in Sources */,
+				B91000B52C22ECB800D274A3 /* EsimHeaderView.swift in Sources */,
 				B949B8882C21F447003F4F3C /* UIImageLoader.swift in Sources */,
 				B9D7AD5E2C215D480074EAA6 /* LocalEsimService.swift in Sources */,
 				B9D7AD7D2C21652F0074EAA6 /* FetchCountryPackagesUseCase.swift in Sources */,
@@ -633,10 +652,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B949B8962C22E7D1003F4F3C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B949B8972C22E7D1003F4F3C /* en */,
+				B949B89A2C22E7EC003F4F3C /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B9D7AD202C215ACD0074EAA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B9D7AD212C215ACD0074EAA6 /* Base */,
+				B949B8992C22E7EC003F4F3C /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -649,6 +678,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -696,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -712,6 +742,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -753,7 +784,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -770,6 +801,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UV47U9D7VM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AiraloTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -797,6 +829,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UV47U9D7VM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AiraloTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -13,9 +13,9 @@ final class CountryPackagesViewModel: ObservableObject {
     private let localEsim: LocalEsimElement
     private let fetchCountryPacakgesUseCase: any FetchCountryPackagesUseCase
 
-    /// Published property to track the current state of articles loading.
+    /// Published property to track the current state of local esim loading.
     @Published private(set) var state: State = State.idle
-    
+    /// Data source for countrypackages to be displayed.
     @Published private(set) var countryPackages: CountryPackages?
 
     init(
@@ -32,8 +32,7 @@ final class CountryPackagesViewModel: ObservableObject {
             guard let self else { return }
             state = .loading
             do {
-                countryPackages = try await fetchCountryPacakgesUseCase.execute(esimId: "\(localEsim.id)")
-                print(countryPackages)
+                countryPackages = try await fetchCountryPacakgesUseCase.execute(esimId: String(localEsim.id))
                 state = .loaded
             } catch {
                 state = .failed(error)

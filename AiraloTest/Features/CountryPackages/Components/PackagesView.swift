@@ -18,7 +18,7 @@ struct PackagesView: View {
     var body: some View {
         if let packages = viewModel.countryPackages?.packages {
             ScrollView(.vertical) {
-                VStack(alignment: .center, spacing: App.Margin.ultra) {
+                VStack(alignment: .center, spacing: App.Margin.extraUltra) {
                     ForEach(packages, id: \.self) { package in
                        PackageCardView(package: package)
                     }
@@ -27,9 +27,9 @@ struct PackagesView: View {
             }
         } else {
             ContentUnavailableView(
-                "No Packages Available",
+                App.Localization.noPackagesAvailableTitle,
                 systemImage: "binoculars",
-                description: Text("Please check back later for available packages.")
+                description: Text(App.Localization.noPackagesAvailableDescription)
             )
         }
     }

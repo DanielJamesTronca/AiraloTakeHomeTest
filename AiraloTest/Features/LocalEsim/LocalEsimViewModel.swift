@@ -21,9 +21,9 @@ final class LocalEsimViewModel {
     
     /// Set to store Combine cancellables.
     internal var cancellables = Set<AnyCancellable>()
-    /// Published property to track the current state of articles loading.
+    /// Published property to track the current state of local esim loading.
     @Published private(set) var state: State = State.idle
-    /// Data source for articles to be displayed.
+    /// Data source for localesim to be displayed.
     private(set) var dataSource: [EsimDataSource] = []
     
     init(
@@ -41,9 +41,7 @@ final class LocalEsimViewModel {
             state = .loading
             do {
                 let localEsim: LocalEsim = try await fetchLocalEsimUseCase.execute()
-                dataSource = [
-                    EsimDataSource(header: App.Localization.popularCountries, esim: localEsim)
-                ]
+                dataSource = [EsimDataSource(header: App.Localization.popularCountries, esim: localEsim)]
                 state = .loaded
             } catch {
                 state = .failed(error)
